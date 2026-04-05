@@ -11,16 +11,11 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/api/employees",
+          "raw": "http://localhost:8080/api/v1/employees",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "8080",
-          "path": [
-            "api",
-            "employees"
-          ]
+          "path": ["api", "v1", "employees"]
         }
       },
       "response": []
@@ -31,17 +26,11 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/api/employees/1",
+          "raw": "http://localhost:8080/api/v1/employees/1",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "8080",
-          "path": [
-            "api",
-            "employees",
-            "1"
-          ]
+          "path": ["api", "v1", "employees", "1"]
         }
       },
       "response": []
@@ -62,16 +51,11 @@
           "raw": "{\n    \"name\": \"John Doe\",\n    \"contactNumber\": \"0123456789\",\n    \"department\": \"Engineering\"\n}"
         },
         "url": {
-          "raw": "http://localhost:8080/api/employees",
+          "raw": "http://localhost:8080/api/v1/employees",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "8080",
-          "path": [
-            "api",
-            "employees"
-          ]
+          "path": ["api", "v1", "employees"]
         }
       },
       "response": []
@@ -89,20 +73,14 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"name\": \"John Doe Updated\",\n    \"contactNumber\": \"0198765432\"\n}"
+          "raw": "{\n    \"name\": \"John Doe Updated\",\n    \"contactNumber\": \"0198765432\",\n    \"department\": \"Engineering\"\n}"
         },
         "url": {
-          "raw": "http://localhost:8080/api/employees/1",
+          "raw": "http://localhost:8080/api/v1/employees/1",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "8080",
-          "path": [
-            "api",
-            "employees",
-            "1"
-          ]
+          "path": ["api", "v1", "employees", "1"]
         }
       },
       "response": []
@@ -113,17 +91,11 @@
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/api/employees/1",
+          "raw": "http://localhost:8080/api/v1/employees/1",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "8080",
-          "path": [
-            "api",
-            "employees",
-            "1"
-          ]
+          "path": ["api", "v1", "employees", "1"]
         }
       },
       "response": []
@@ -134,17 +106,11 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/api/employees/history",
+          "raw": "http://localhost:8080/api/v1/employees/history",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "8080",
-          "path": [
-            "api",
-            "employees",
-            "history"
-          ]
+          "path": ["api", "v1", "employees", "history"]
         }
       },
       "response": []
