@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: employee-db
+    environment:
+      POSTGRES_DB: employeedb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secretpassword
+      TZ: Asia/Kuala_Lumpur
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  api:
+    build: ./be-employeeportal
+    container_name: employee-api
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_URL=jdbc:postgresql://db:5432/employeedb
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=secretpassword
+      - TZ=Asia/Kuala_Lumpur
+    depends_on:
+      - db
+
+  frontend:
+    build: ./fe-employeeportal
+    container_name: employee-ui
+    ports:
+      - "5173:80"
+    depends_on:
+      - api
+
+volumes:
+  postgres_data:
