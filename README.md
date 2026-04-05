@@ -39,17 +39,19 @@ Beyond standard CRUD requirements, this application implements several enterpris
 ## Project Structure
 This repository uses a Monorepo pattern to keep the frontend, backend, and infrastructure strictly aligned.
 
+```text
 /employeeportal
  ├── /be-employeeportal      (Spring Boot Backend)
  │    ├── src/main/java/...
  │    ├── pom.xml
- │    └── Dockerfile           (Multi-stage Maven to Alpine JRE)
- ├── /fe-employeeportal       (React Vite Frontend)
+ │    └── Dockerfile         (Multi-stage Maven to Alpine JRE)
+ ├── /fe-employeeportal      (React Vite Frontend)
  │    ├── src/...
  │    ├── package.json
- │    ├── nginx.conf           (React Router configuration)
- │    └── Dockerfile           (Multi-stage Node build to Nginx)
- └── docker-compose.yml        (Master infrastructure configuration)
+ │    ├── nginx.conf         (React Router configuration)
+ │    └── Dockerfile         (Multi-stage Node build to Nginx)
+ └── docker-compose.yml      (Master infrastructure configuration)
+```
 
 ---
 
