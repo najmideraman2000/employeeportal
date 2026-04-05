@@ -30,9 +30,7 @@ Beyond standard CRUD requirements, this application implements several enterpris
 2. **JPA Auditing:** All employee records automatically track their exact creation and last-modified timestamps at the database level.
 3. **Global Exception Handling:** A `@ControllerAdvice` layer catches backend errors and validation failures, returning clean, standardized JSON responses rather than raw stack traces.
 4. **Strict Request Validation:** The API strictly validates incoming payloads (e.g., ensuring Malaysian phone numbers are exactly 10-11 digits) before touching the database layer.
-5. **API Versioning:** Endpoints are versioned (`/api/v1/...`) to ensure future scalability without breaking existing clients.
-6. **Auto-Generated Documentation:** A fully interactive Swagger UI is generated at runtime based on the Java controller annotations.
-7. **Global CORS Configuration:** Implemented safely at the application configuration level rather than individual controllers.
+5. **Auto-Generated Documentation:** A fully interactive Swagger UI is generated at runtime based on the Java controller annotations.
 
 ---
 
